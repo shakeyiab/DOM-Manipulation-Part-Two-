@@ -121,7 +121,7 @@ subMenuEl.addEventListener("click",help())
     //Next, the event listener should set the CSS top property of subMenuEl to 0.
     subMenuEl.style.top="0%";
     //Remove the active class from each <a> element in topMenuLinks.
-    subMenuEl.target.classList.remove("active");
+    subMenuEl.target.classList.remove("");
     //If the ABOUT link is clicked, an <h1>About</h1> should be displayed.
     }
     
