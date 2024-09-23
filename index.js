@@ -82,7 +82,7 @@ if (Event.target.matches !==("a")) {
     if (Event.target.classList.contains("active")) {
         //The event listener should remove the active class from each other <a> element in topMenuLinks - 
         //whether the active class exists or not.
-        topMenuEl.target.classList.remove("active")
+        topMenuLinks.target.classList.remove("active")
         }
         //If the clicked <a> element's "link" object within menuLinks has a subLinks property (all do, except for the "link" object for ABOUT), 
         //set the CSS top property of subMenuEl to 100%.
@@ -106,7 +106,7 @@ function bulidsubmenu(subLinks){
     //Set the element's content to the value of the text property of the "link" object.
     alink.innerText=link.text;
     //Append the new element to the subMenuEl.
-    subMenuEl.appendChild(alink);
+    subMenuEl.appendChild(bulidsubmenu());
     })
 //Attach a delegated 'click' event listener to subMenuEl.
 subMenuEl.addEventListener("click",help())
@@ -121,8 +121,13 @@ subMenuEl.addEventListener("click",help())
     //Next, the event listener should set the CSS top property of subMenuEl to 0.
     subMenuEl.style.top="0%";
     //Remove the active class from each <a> element in topMenuLinks.
-    subMenuEl.target.classList.remove("");
+    subMenuEl.target.classList.remove("//Next, the event listener should set the CSS top property of subMenuEl to 0.")  
+      subMenuEl.style.top="0%";
+    //Remove the active class from each <a> element in topMenuLinks.
+    subMenuEl.target.classList.remove("active");
     //If the ABOUT link is clicked, an <h1>About</h1> should be displayed.
+    }
+
     }
     
 
@@ -130,4 +135,4 @@ subMenuEl.addEventListener("click",help())
 
 
 }
-}
+
